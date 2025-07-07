@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not ESPN</title>
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function(){
+        emailjs.init("2dVl-r-Gos_Ps72HK");
+    })();
+    </script>
+</head>
+<body>
+    <header id="bar">
+        <a href="#noticias"><p>not espn</p></a>
+        <nav>
+            <a href="noticias.html">NOTICIAS</a>
+            <a href="#contacto">CONTACTO</a>
+            <a href="index.html#about-me">SOBRE MÍ</a>
+            <a href="linktree.html">LINKTREE</a>
+        </nav>
+    </header>
+    <section id="noticias">
+        <div id="container-noticias">
+            <a href="noticia-1.html"><div class="noticia">
+                <img src="/imgs/8537e810-4ff9-11f0-a4e7-aff14a71dc45.jpg" alt="OKC campeon">
+                <h1>NBA Finals: Oklahoma City Thunder se consagra campeón</h1>
+                <p>La franquicia alcanza la gloria máxima de la mano de Shai: el trofeo Larry O'Brien. Vuelve a ser campeona de la NBA 46 años después de la última vez (1979), cuando se llamaba Supersonics y estaba en Seattle.</p>
+            </div></a>
+            <a href="noticia-2.html"><div class="noticia">
+                <img src="/imgs/descargar.jpg" alt="boca pierde 2-1">
+                <h1>Boca Juniors pierde 2-1 ante Bayern Múnich y queda complicado en el Mundial de Clubes</h1>
+                <p>Boca cayó 2-1 con Bayern Munich, en la fecha 2 del Grupo C del Mundial de Clubes. Se acercó a sacar un punto clave, tras haber igualado con Benfica, pero no lo pudo sostener y terminó perdiendo en Miami.</p>  
+            </div></a>
+            <a href="noticia-3.html"><div class="noticia">
+                <img src="/imgs/2219118972.0.jpg" alt="sean o'malley vs merab dvalishvili 2">
+                <h1>Merab vs O’Malley 2: Merab Dvalishvili somete a Sean O’Malley en el tercer asalto</h1>
+                <p>Merab Dvalishvili somete en el segundo asalto a Sean O’Malley y retiene su título del peso gallo de la UFC: El georgiano salió con su cardio incansable y su presión asfixiante. Sean O’Malley pasará por el quirófano y estará de baja por varios meses.</p>  
+            </div></a>
+        </div>
+        <section id="v">
+            <a href="noticias.html" id="ver-mas">Ver más</a>
+        </section>
+    </section>
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <form id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="8" required></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+    <footer id="contacto-info">
+            <ul>
+                <li><a href="https://www.instagram.com/nikoxsanchez/"target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/+541161750304"target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://github.com/niko-gs"target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="mailto:nicolas.gabriel.sanchez@gmail.com"target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+            <p>© 2025 - Not ESPN</p>
+    </footer>
+<script>
+  document.getElementById("formulario").addEventListener("submit", function(event) 
+  {
+    event.preventDefault();
+    emailjs.sendForm("service_jp21mzp", "template_r9s4ml3", this)
+      .then(function() {
+        alert("Mensaje enviado.");
+        document.getElementById("formulario").reset();
+      }, function(error) {
+        alert("Ocurrió un error: " + JSON.stringify(error));
+      });
+  });
+</script>
+</body>
+</html>

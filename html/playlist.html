@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist: Reproducidos recientemente - Niko</title>
+    <link rel="icon" href="/imgs/icono.ico">
+    <link rel="stylesheet" href="/css/playlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section>
+        <div class="background"></div>
+        <div class="logo"><a href="/html/index.html">Sánchez.</a></div>
+        <nav>
+            <input type="checkbox"name="" id="check">
+            <div class="container">
+                <label for="check" class="toggle">
+                    <span class="espacio "id="bars"><i class="fa-solid fa-bars"></i></span>
+
+                </label>
+                <div class="head">Menú</div>
+                <ul class="menu-items">
+                    <li><a href="index.html">INCIO</a></li>
+                    <li><a href="tabla.html">TABLA</a></li>
+                    <li><a href="playlist.html">PLAYLIST</a></li>
+                    <li><a href="pistolero.html" target="_blank">GUNMAN</a></li>
+                    <li><a href="index.html#contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-player">
+            <div class="reproductor-cover">
+                <img src="/imgs/covers/pngimg.png" class="active" id="cover">
+            </div>
+            <h2 id="titulo">Título</h2>
+            <h3 id="artista">Artista</h3>
+            <div class="controles">
+                <i class="fa-solid fa-backward" title="Previo" id="prev"></i>
+                <i class="fa-solid fa-play" title="Play" id="play"></i>
+                <i class="fa-solid fa-forward" title="Siguiente" id="next"></i>
+            </div>
+            <div class="reproductor-progreso" id="reproductor-progreso">
+                <div class="progreso" id="progreso"></div>
+                <div class="tema-duracion">
+                    <span id="current">0:00</span>
+                    <span id="duracion">0:00</span>
+                </div>
+            </div>     
+        </div>
+    </section>
+    <script src="/javascript/playlist.js"></script>   
+</body>
+</html>

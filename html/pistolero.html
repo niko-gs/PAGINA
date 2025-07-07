@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUNMAN</title>
+  <link rel="icon" href="/imgs/chamber_opp.ico">
+  <link rel="stylesheet" href="/css/pistolero.css">
+</head>
+<body>
+  <h1 class="nombre-juego">GUNMAN</h1>
+  <div>
+    <img class="sangre"src="" alt="sangre splatter">
+    <img class="cpu-selec" src="/imgs/Pistolero/mark.png" alt="">
+  </div>
+  <div class="screen">
+    <button id="btn-recargar" onclick="play('recargar')"><img src="/imgs/Pistolero/1087-200.png" alt="tambor revolver"></button>
+    <button id="btn-disparar" onclick="play('disparar')"><img src="/imgs/Pistolero/Sin título-2.png" alt="revolver"></button>
+    <button id="btn-escudo" onclick="play('escudo')"><img src="/imgs/Pistolero/Black_question_mark.png" alt="escudo"></button>
+  </div>
+
+  <div class="status">
+    <p id="muerte"><span style="color: #e0e0e0;">Bienvendios a <span style="color: #750000;">Gunman</span>, basado en el juego de manos llamado “pistolero”. El juego consiste en un único objetivo;</span> eliminar al oponente.</p>
+    <p id="result">Hay 3 posibles acciones: cargar una bala en la recámara (6 balas de capacidad máxima, comienza en 0 cada ronda), disparar o utilizar un escudo para protegerse.</p>
+    <p id="balas">El signo de interrogación va a revelar la acción elegida por la cpu una vez que el jugador elija la suya.</p>
+    <p id="score"><span style="color: #750000;">Y rezá porque no dispare mientras recargas…</span></p>
+    <p id="hi"></p>
+  </div>
+
+<script src="/javascript/pistolero.js"></script>
+</body>
+</html>
