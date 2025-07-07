@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "dreams";
+    src: url(/fonts/BillionDreams_PERSONAL.ttf) format('truetype');
+}
+@font-face {
+    font-family: "noto";
+    src: url(/fonts/NotoSans-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: "notobold";
+    src: url(/fonts/NotoSans_Condensed-ExtraBold.ttf) format('truetype');
+}
+html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0;
+    color: inherit;
+    text-decoration: none;
+}
+#inicio{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.94), rgb(0, 0, 0, 0.99)), url(/imgs/1420427-3840x2160-desktop-4k-miami-skyline-wallpaper-image.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    z-index: 2;
+}
+.navbar ul li{
+    display: inline-block;
+    color: white;
+}
+.navbar ul{
+    padding-right: 3%;
+    display: flex;
+    gap: 70px;
+    font-family: notobold;
+}
+.navbar a{
+    transition: 0.5s ease;
+}
+.navbar a:hover{
+    filter: drop-shadow(0 0 13px rgba(165, 156, 213)) brightness(1.3);
+}
+#logo {
+    padding-left: 3%;
+    font-size: 2.2rem;
+    font-family: dreams;
+    color: white;   
+}
+#welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  height: 75%;
+  color: white;
+  font-family: noto;
+  padding: 0 5%;
+  z-index: 0;
+}
+
+#welcome img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  object-position: 30% 70%;
+  border-radius: 100%;
+  transition: 0.5s ease;
+}
+#welcome img:hover{
+    filter: drop-shadow(0 0 10px rgba(165, 156, 213, 0.5)) brightness(1);
+    scale: 1.03; 
+}
+
+.welcome-texto {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#titulo {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  font-family: dreams;
+}
+
+.welcome-texto p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+span{
+  font-family: noto;
+}
+#boton{
+    color: white;
+    align-self: center;
+    position: relative;
+    bottom: -75px;
+    font-family: notobold;
+    border-radius: 10px;
+    padding: 2.2% 3%;
+    box-shadow: 0px 0px 7px rgb(165, 156, 213, 0.2);
+    transition: 0.5s ease;
+}
+#boton:hover{
+    background-color: rgb(205, 132, 151);
+    box-shadow: none;
+    color: black;
+    filter: drop-shadow(0 0 10px rgba(165, 156, 213, 0.3)) brightness(1);
+}
+#curriculum{
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+#cv{
+    color: white;
+    font-family: notobold;
+    font-size: 3rem;
+}
+.box_cv{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 45px;
+    align-items: center;
+    padding: 4% 6%;
+    min-width: 600px;
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: black;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.97), rgb(0, 0, 0, 0.99)), url(/imgs/1420427-3840x2160-desktop-4k-miami-skyline-wallpaper-image.jpg);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(165, 156, 213, 0.2)) brightness(1);
+
+}
+.title{
+    font-family: notobold;
+    font-size: 2rem;
+}
+#edu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: noto;
+    padding-bottom: 4%;
+}
+span{
+    font-family: notobold;
+    font-size: 1.2rem;
+}
+.conocimientos{
+    align-content: center;
+    display: flex;
+    gap: 40px;
+    font-family: noto;
+    flex-wrap: wrap;
+}
+#proyectos{
+    padding-top: 12%;
+    padding-bottom: 10%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+#titulo_wrap{
+    font-family: notobold;
+    padding-bottom: 1%;
+    font-size: 3rem;
+    color: white;
+}
+.proyecto_box{
+    display: flex;
+    flex-direction: row;
+    min-width: 850px;
+    max-width: 850px;
+    min-height: 260px;
+    gap: 40px;
+    padding: 2% 2%;
+    border-radius: 10px;
+    background-color: black;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.97), rgb(0, 0, 0, 0.99)), url(/imgs/1420427-3840x2160-desktop-4k-miami-skyline-wallpaper-image.jpg);
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgba(165, 156, 213, 0.2)) brightness(1);
+    transition: 0.5s ease;
+}
+.proyecto_box img{
+    max-width: 500px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.proyecto_box p{
+    color: white;
+}
+.texto_proyec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+.titulo_proyecto{
+    font-family: notobold;
+    font-size: 1.5rem;
+}
+.descripcion{
+    font-family: noto;
+    font-size: 1rem;
+}
+.proyecto_box:hover{
+    scale: 1.01;
+    filter: drop-shadow(0 0 12px rgba(165, 156, 213, 0.4)) brightness(1.2);
+}
+#contacto{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+#formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 2% 15%;
+  font-family: noto;
+}
+#formulario label{
+  color: white;;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+#formulario input{
+  height: 8vh;
+  padding-left: 10px;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+#formulario button{
+  align-self: center;
+  width: 12%;
+  height: 42px;
+  font-family: notobold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  transition: 0.5s ease;
+  border: none;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+#formulario button:hover{
+  background-color: rgb(205, 132, 151);
+  box-shadow: none;
+  color: white;
+  filter: drop-shadow(0 0 15px rgba(205, 132, 151, 0.3)) brightness(1);
+  scale: 1.05;
+}
+#contacto h1{
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  font-family: notobold;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+#mensaje{
+  padding-left: 10px;
+  padding-top: 7px;
+  font-family: noto;
+}
+#contacto-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  background-color:black;
+}
+#contacto-info i:hover{
+  filter: drop-shadow(0 0 15px rgba(205, 132, 151)) brightness(1);
+  scale: 1.05;
+}
+#contacto-info li{
+  display: inline;
+  font-size: 1.5rem;
+}
+#contacto-info ul{
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 0;
+  gap: 100%;
+}
+i{
+  color: white;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+  transition: 0.5s ease;
+}
+#contacto-info p{
+  color: white;
+  font-family: noto;
+  font-size: 0.5rem;
+}

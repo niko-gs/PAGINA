@@ -1,0 +1,421 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: bold;
+  color: rgb(35, 35, 35);
+  text-decoration: none;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+@font-face {
+    font-family: "sports";
+    src: url(/fonts/SFSportsNight.ttf) format('truetype');
+}
+@font-face {
+    font-family: "bold";
+    src: url(/fonts/Poppins-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: "regular";
+    src: url(/fonts/Poppins-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: "light";
+    src: url(/fonts/Poppins-Light.ttf) format('truetype');
+}
+@keyframes hop-in{
+  0%{
+      transform: translateX(-150%);
+    }
+  100%{
+      transform: translateY(0px);
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}   
+#bar {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  position: fixed;
+  box-shadow: 0 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#bar p {
+  color: #e52534;
+  font-family: sports;
+  font-size: 3rem;
+  animation: hop-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+  position: relative;
+  left:-4%;
+  animation: fade-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+
+nav a {
+  color: #e52534;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 7px 10px;
+  font-family: bold;
+  border-radius: 3px;
+  transition: 0.3s ease-in;
+}
+nav a:hover{
+  background-color: #e52534;
+  color: white;
+  box-shadow: 2px 2px 3px rgb(0, 0, 0,0.4);
+}
+#noticias{
+  width: 100%;
+  padding-top: 10vh;
+}
+#container-noticias {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 25px;
+  padding: 40px;
+  flex-wrap: wrap;
+  animation: fade-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+
+.noticia {
+  flex: 1 1;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease-in;
+  min-width: 400px;
+  max-width: 600px;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+.noticia:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+.noticia:hover h1{
+  color: #e52534;
+}
+.noticia img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  max-width: 600px;
+}
+
+.noticia p {
+  padding: 20px;
+  font-size: 1rem;
+  font-family: regular;
+}
+.noticia h1{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.4s ease-in;
+}
+#v{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 1.5%;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+  padding-bottom: 5%;
+}
+#ver-mas{
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border: solid 1px rgb(35, 35, 35);
+  padding: 1% 4.2%;
+  transition: 0.4s ease;
+  border-radius: 3px;
+}
+#ver-mas:hover{
+  color: white;
+  background-color: #e52534;
+  border: transparent 1px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+#contacto-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 5%;
+  background-color:#e52534;
+  text-align: center;
+}
+#contacto-info a{
+  padding: 10 20px;
+}
+#contacto-info a:hover{
+  box-shadow: 2px 2px 5px;
+}
+#contacto-info li{
+  display: inline;
+  padding:0 25px;
+  font-size: 1.5rem;
+}
+#contacto-info ul{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+i{
+  color: white;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+#contacto-info p{
+  color: white;
+  font-family: light;
+  font-size: 0.6rem;
+}
+#contacto{
+  width: 100%;
+  padding-top: 60px;
+  background-color: #e52534;
+}
+#formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px 230px;
+}
+#formulario label{
+  color: white;;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+#formulario input{
+  height: 7vh;
+  padding-left: 10px;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+#formulario button{
+  align-self: center;
+  width: 14%;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #e52534;
+  transition: 0.3s ease;
+  border: none;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+#formulario button:hover{
+  background-color: #e52534;
+  color: white;
+  border: white;
+  box-shadow: 1px 1px 5px 2px black;
+}
+#contacto h1{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  animation-name: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+#mensaje{
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+@media (max-width: 768px){
+  #bar p{
+    font-size: 3rem;
+  }
+  #bar nav a{
+    font-size: 1.1rem;
+  }
+  #bar nav {
+    gap: 15px;
+  }
+  #ver-mas{
+    font-size: 1.5rem;
+  }
+  #formulario{
+    padding: 20px 80px;
+    gap: 30px;
+  }
+  #formulario label{
+    font-size: 1.5rem;
+  }
+  #formulario input{
+    font-size: 1.5rem;
+  }
+  #formulario textarea{
+    font-size: 1.4rem;
+  }
+  #formulario button{
+    width: 25%;
+    height: 55px;
+    font-size: 1.3rem;
+  }
+  #contacto{
+    background-color: #e52534;
+  }
+  #contacto-info li{
+    font-size: 2.1rem;
+  }
+  #contacto-info p{
+    font-size: 1rem;
+  }
+  #contacto-info ul{
+    padding-top: 40px;
+  }
+  .noticia h1{
+    font-size: 1.8rem;
+  }
+    .noticia p{
+    font-size: 1.5rem;
+  }
+}
+@media (min-width:820px) and (max-width:1024px){
+  #bar p{
+    font-size: 3.1rem;
+  }
+  #bar nav a{
+    font-size: 1.2rem;
+  }
+  #bar nav {
+    gap: 20px;
+  }
+  #ver-mas{
+    font-size: 1.6rem;
+  }
+  #formulario{
+    padding: 20px 80px;
+    gap: 30px;
+  }
+  #formulario label{
+    font-size: 1.5rem;
+  }
+  #formulario input{
+    font-size: 1.5rem;
+  }
+  #formulario textarea{
+    font-size: 1.4rem;
+  }
+  #formulario button{
+    width: 25%;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  #contacto-info li{
+    font-size: 2.3rem;
+  }
+  #contacto-info p{
+    font-size: 1rem;
+  }
+  .noticia h1{
+    font-size: 1.8rem;
+  }
+    .noticia p{
+    font-size: 1.6rem;
+  }
+}
+@media (min-width:1440px){
+  #bar p{
+    font-size: 5rem;
+  }
+  #bar nav a{
+    font-size: 1.7rem;
+  }
+  #bar nav {
+    gap: 40px;
+  }
+  #ver-mas{
+    font-size: 1.5rem;
+  }
+  #formulario{
+    padding: 30px 300px;
+    gap: 50px;
+  }
+  #formulario label{
+    font-size: 1.8rem;
+  }
+  #formulario input{
+    font-size: 1.4rem;
+  }
+  #formulario textarea{
+    font-size: 1.3rem;
+  }
+  #formulario button{
+    width: 12%;
+    height:65px;
+    font-size: 1.5rem;
+  }
+  #contacto h1{
+    font-size: 3.5rem;
+  }
+  #contacto-info li{
+    font-size: 2.2rem;
+  }
+  #contacto-info p{
+    font-size: 1rem;
+  }
+  .noticia h1{
+    font-size: 1.9rem;
+  }
+  .noticia p{
+    font-size: 1.6rem;
+  }
+  .noticia{
+    min-height: 900px;
+  }
+  .noticia img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  max-width: 600px;
+  }
+}

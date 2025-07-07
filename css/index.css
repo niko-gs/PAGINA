@@ -1,0 +1,341 @@
+@font-face {
+    font-family: "dreams";
+    src: url(/fonts/BillionDreams_PERSONAL.ttf) format('truetype');
+}
+@font-face {
+    font-family: "nunito ex";
+    src: url(/fonts/Nunito-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: "nunito";
+    src: url(/fonts/Nunito-Light.ttf) format('truetype');
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+@keyframes hop-in{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100%;
+    width: 17%;
+    position: absolute;
+    background: rgba(154, 139, 240, 0.4);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100%);
+    top:0%;
+    box-shadow: 0px 0px 15px;
+}
+
+.head{
+    color: #eae7fe;
+    text-align: center;
+    padding:20px 0;
+    padding-right: 10px;
+    font-family: dreams;
+    font-size: 40px;
+    background-color: rgba(21, 17, 43,0.2);
+}
+.menu-items{
+    width: 100%;
+    list-style: none;
+    padding-top: 7px;
+}
+.menu-items li{
+    padding-top: 7px;
+    width: 100%;
+    display: block;
+}
+.menu-items li a{
+color: #eae7fe;
+padding: 15px 15px;
+text-decoration: none;
+display: block;
+font-family: nunito ex;
+}
+
+.menu-items li:hover a{
+box-shadow: 1px 1px 20px rgba(0, 0, 0,0.4);
+border-radius: 5px;
+letter-spacing: 1px;
+}
+input{
+    -webkit-appearance: none;
+    appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.espacio{
+    position: absolute;
+    right: -30%;
+    top: 4%;
+    border-radius: 5px;
+    padding: 0px 10px;
+    cursor: pointer;
+    width: 10%;
+    height: 30px;
+    color: rgba(234, 231, 254,0.9);
+}
+#check:checked~.container{
+    transform: translate(0px);
+}
+#bars{
+    font-size: 20px;
+}
+nav{
+    display: inline;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#9a8bf04d,#9a8bf04d),url(/imgs/Miami_Beach-Art_Deco_District_at_night_wallpaper_1366x768.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative
+}
+a{
+    text-decoration: none;
+    color:inherit 
+}
+.logo a{
+    font-family: dreams;
+    color: rgb(234, 231, 254);
+    font-size: 50px;
+    padding-top: 7%;
+    opacity: 0.9;
+    animation: hop-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    position: fixed;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+
+}
+.intro{
+    color:#eae7fe;
+    font-family: nunito;
+    text-align: center;
+    font-family: nunito ex;
+    padding-top: 18%;
+    font-size: 95px;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+#contacto{
+    margin-top: 22%;
+}
+.contacto-items{
+    text-align: center;
+}
+.contacto-items li {
+    display: inline;
+    padding: 0 20px;
+    padding-bottom: 5px;
+}
+.contacto-items h3{
+    font-family: nunito ex;
+    color: #eae7fe ;
+    padding-bottom: 3%;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.contacto-items i{
+    font-size: 1.3rem;
+    padding-bottom: 2%;
+    color: #eae7fe;
+    transition: 0.3s ease;
+}
+.contacto-items i:hover{
+    color: rgb(0, 0, 0, 0.6);
+}
+#about-me{
+    margin-left: 30px;
+    padding-top: 25px;
+    margin-right: 30px;
+}
+.titulo{
+    text-align: center;
+    color: #15112B;
+    font-family: nunito ex;
+    font-weight: bold;
+    font-size: 50px;
+    background-image: linear-gradient(#9a8bf04d,rgba(154, 139, 240, 0.3)), url(/imgs/Miami_Beach-Art_Deco_District_at_night_wallpaper_1366x768.jpg);
+    background-position: bottom;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 4%;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.photo img{
+    width: 40%;
+    border-radius: 20px;
+    float:left;
+    margin-right: 30px;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+    box-shadow: 10px 10px 15px black;
+
+}
+
+.texto-about-me p{
+    padding-top: 100px;
+    font-family: nunito;
+    font-size: 20px;
+    color: #eae7fe;
+    animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.Miami{
+    font-family: nunito;
+    text-decoration: underline;
+    text-decoration-thickness: 0.px;
+    text-decoration-color: #eae7fe;
+}
+.tramo2{
+    background-color: #15112B;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 30%;
+        transform: translateX(-100%);
+    }
+    .espacio{
+        margin-top: 0%;
+    }
+    #bars{
+        right: -50%;
+    }
+    .logo a {
+        font-size: 45px;
+        padding-top: 15%;
+    }
+
+    .intro {
+        font-size: 48px;
+        padding-top: 60%;
+    }
+
+    .about-me {
+        margin: 10px;
+        padding-top: 25px;
+    }
+
+    .titulo {
+        font-size: 32px;
+        padding-bottom: 20px;
+    }
+
+    .photo img {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .texto-about-me p {
+        padding-top: 20px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .contacto-items h3 {
+        font-size: 10px;
+    }
+
+    .contacto-items li {
+        padding: 10px;
+    }
+
+    .espacio {
+        right: -20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        font-size: 36px;
+        padding-top: 35%;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .texto-about-me p {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        width: 15%;
+    }
+
+    .logo a {
+        font-size: 65px;
+    }
+
+    .intro {
+        font-size: 130px;
+    }
+
+    .titulo {
+        font-size: 70px;
+    }
+    #bars{
+        font-size: 30px;
+    }
+
+    .photo img {
+        width: 500px;
+    }
+
+    .texto-about-me p {
+        font-size: 25px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

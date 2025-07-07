@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "dreams";
+    src: url(/fonts/BillionDreams_PERSONAL.ttf) format('truetype');
+}
+@font-face {
+    font-family: "nunito ex";
+    src: url(/fonts/Nunito-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: "nunito";
+    src: url(/fonts/Nunito-Light.ttf) format('truetype');
+}
+@keyframes hop-in{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}    
+body{
+    font-family: nunito;
+}
+section{
+    background-image: linear-gradient(#9a8bf04d,#9a8bf04d),url(/imgs/Miami_Beach-Art_Deco_District_at_night_wallpaper_1366x768.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.logo a{
+    font-family: dreams;
+    font-size: 50px;
+    padding-top: 7%;
+    opacity: 0.9;
+    animation: hop-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+    text-decoration: none;
+    color:inherit
+}
+.container{
+    height: 100%;
+    width: 17%;
+    position: absolute;
+    background: rgba(154, 139, 240);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100%);
+    top:0%;
+    box-shadow: 0px 0px 15px;
+}
+
+.head{
+    color: #eae7fe;
+    text-align: center;
+    padding:20px 0;
+    padding-right: 10px;
+    font-family: dreams;
+    font-size: 40px;
+    background-color: rgba(21, 17, 43,0.2);
+}
+.menu-items{
+    width: 100%;
+    list-style: none;
+    padding-top: 7px;
+}
+.menu-items li{
+    padding-top: 7px;
+    width: 100%;
+    display: block;
+}
+.menu-items li a{
+color: #eae7fe;
+padding: 15px 15px;
+text-decoration: none;
+display: block;
+font-family: nunito ex;
+}
+
+.menu-items li:hover a{
+box-shadow: 1px 1px 20px rgba(0, 0, 0,0.4);
+border-radius: 5px;
+letter-spacing: 1px;
+}
+input{
+    -webkit-appearance: none;
+    appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.espacio{
+    position: absolute;
+    right: -30%;
+    top: 2.2%;
+    border-radius: 5px;
+    padding: 0px 10px;
+    cursor: pointer;
+    width: 10%;
+    height: 30px;
+    color: rgba(234, 231, 254,0.9);
+}
+#check:checked~.container{
+    transform: translate(0px);
+}
+#bars{
+    font-size: 20px;
+}
+nav{
+    display: inline;
+    width: 100%;
+    height: 10hv;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#9a8bf04d,#9a8bf04d),url(/imgs/Miami_Beach-Art_Deco_District_at_night_wallpaper_1366x768.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative
+}
+.seccion-tabla{
+    padding-top: 12%;
+    padding-bottom: 2%;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0,0.2);
+    box-shadow: 0px 0px 10px;
+    animation-name: fade-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+}
+td{
+    text-align: center;
+    vertical-align: middle;
+    color:#eae7fe;
+}
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#top{
+    font-family: nunito ex;
+}
+h2{
+    text-align: center;
+    font-family: nunito ex;
+    color: #eae7fe;
+}

@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "dreams";
+    src: url(/fonts/BillionDreams_PERSONAL.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "nunito ex";
+    src: url(/fonts/Nunito-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "nunito";
+    src: url(/fonts/Nunito-Light.ttf) format('truetype');
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes hop-in{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.glow {
+    filter: drop-shadow(0 0 13px rgba(165, 156, 213,0.8)) brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: nunito;
+}
+.container{
+    height: 100%;
+    width: 17%;
+    position: absolute;
+    background: rgba(154, 139, 240, 0.4);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-270px);
+    top:0%;
+    box-shadow: 0px 0px 15px;
+}
+
+.head{
+    color: #eae7fe;
+    text-align: center;
+    padding:20px 0;
+    padding-right: 10px;
+    font-family: dreams;
+    font-size: 40px;
+    background-color: rgba(21, 17, 43,0.2);
+}
+.menu-items{
+    width: 100%;
+    list-style: none;
+    padding-top: 7px;
+}
+.menu-items li{
+    padding-top: 7px;
+    width: 100%;
+    display: block;
+}
+.menu-items li a{
+color: #eae7fe;
+padding: 15px 15px;
+text-decoration: none;
+display: block;
+font-family: nunito ex;
+}
+
+.menu-items li:hover a{
+box-shadow: 1px 1px 20px rgba(0, 0, 0,0.4);
+border-radius: 5px;
+letter-spacing: 1px;
+}
+input{
+    -webkit-appearance: none;
+    visibility: hidden;
+    appearance: none;
+}
+.espacio{
+    position: absolute;
+    right: -40.4%;
+    top: 3.7%;
+    border-radius: 5px;
+    padding: 0px 10px;
+    cursor: pointer;
+    width: 10%;
+    height: 30px;
+    color: rgba(234, 231, 254,0.9);
+}
+#check:checked~.container{
+    transform: translate(0px);
+}
+#bars{
+    font-size: 20px;
+}
+nav{
+    display: inline;
+}
+section {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#9a8bf04d,#9a8bf04d), url(/imgs/Miami_Beach-Art_Deco_District_at_night_wallpaper_1366x768.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.logo a{
+    font-family: dreams;
+    color: rgb(234, 231, 254);
+    font-size: 50px;
+    opacity: 0.9;
+    padding-top: 7%;
+    animation: hop-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    position: fixed;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+    text-decoration: none;
+
+}
+
+.container-player {
+    width: 45%;
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+    box-shadow: 0px 0px 15px 7px rgba(0,0,0,0.7);
+    padding-bottom: 40px;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: fade-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+}
+
+.reproductor-cover img {
+    width: 170px;
+    cursor: pointer;
+}
+.reproductor-cover{
+    transition: 0.3s ease;
+}
+.reproductor-cover:hover{
+    scale:1.06;
+}
+
+h2, h3 {
+    color: #eae7fe;
+    text-align: center;
+    padding-top: 5px;
+}
+h2{
+    font-family: nunito ex;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+h3{
+    font-family: nunito ex;
+    padding-bottom: 25px;
+}
+
+.controles {
+    display: flex;
+    gap: 100px;
+    font-size: 22px;
+    color: #eae7fe;
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+.controles i{
+    cursor: pointer;
+}
+
+.reproductor-progreso {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    position: relative;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.progreso {
+    height: 100%;
+    background-color:#eae7fe ;
+    width: 0%;
+    border-radius: 5px;
+}
+
+.tema-duracion {
+    display: flex;
+    justify-content: space-between;
+    color:#eae7fe;  
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 35%;
+        transform: translateX(-100%);
+    }
+
+    .espacio {
+        right: -20%;
+    }
+
+    .logo a {
+        font-size: 32px;
+        padding-top: 22%;
+    }
+
+    .container-player {
+        width: 90%;
+        margin-top: 25%;
+        padding: 20px;
+    }
+
+    .reproductor-cover img {
+        width: 120px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .controles {
+        gap: 30px;
+        font-size: 18px;
+    }
+
+    .tema-duracion {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 15%;
+        transform: translateX(-100%);
+    }
+    #bars{
+        right: -20%;
+        font-size: 30px;
+    }
+
+    .logo a {
+        font-size: 65px;
+    }
+
+    .container-player {
+        width: 40%;
+        max-width: 900px;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .reproductor-cover img {
+        width: 220px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .controles {
+        gap: 120px;
+        font-size: 27px;
+    }
+
+    .tema-duracion {
+        font-size: 14px;
+    }
+}

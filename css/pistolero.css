@@ -1,0 +1,103 @@
+@font-face{
+    font-family: shlop;
+    src: url(/fonts/shlop_rg.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image:linear-gradient(rgba(0, 0, 0,0.85),rgba(0, 0, 0,0.85)),url(/imgs/einar-timhagen-nyc-alley-01-1.jpg);
+    font-family: shlop;
+    background-size: cover;
+}
+button {
+    padding: 10px 10px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+}
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+button:hover{
+    scale:1.1;
+    background-color: rgba(117, 0, 0, 0.9);
+    border-radius: 20px;
+    
+}
+
+button img{
+    width: 100px;
+    padding: 5px 20px;
+}
+.status {
+    color: #e0e0e0;
+    letter-spacing: 3px;
+    font-size: 22px;
+    font-family: shlop;
+}
+.status p{
+    padding-bottom: 15px;
+}
+.cpu-selec{
+    width: 160px;
+    padding-bottom: 10px;
+    z-index: 1;
+
+}  
+.nombre-juego{
+    color: #750000;
+    letter-spacing: 5px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+.sangre{
+    z-index: -2;
+    width: 250px;
+    position: absolute;
+    top: 51%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+#muerte{
+    color: #750000;
+}
+
+@media (min-width: 1400px) {
+    .nombre-juego {
+        font-size: 45px;
+        padding-left: 1%;
+    }
+
+    .cpu-selec {
+        width: 225px;
+    }
+
+    button img {
+        width: 150px;
+    }
+
+    .status {
+        font-size: 45px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .sangre {
+        width: 300px;
+        padding-bottom: 6%;
+    }
+}
