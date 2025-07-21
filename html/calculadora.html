@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="icon" href="/imgs/icono.ico">
+    <link rel="stylesheet" href="/css/calculadora.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="Inicio">
+        <a href="portfolio.html" id="logo"><p>Sánchez</p></a>
+        <div class="calculadora-container">
+            <input type="text" class="calculadora-pantalla" id="pantalla" value="0" readonly="">
+            <div class="calculadora-botones">
+                <button class="calc-btn borrar doble" onclick="borrarTodo()">C</button>
+                <button class="calc-btn operador" onclick="calcularPorcentaje('%')"><i class="fa-solid fa-percent"></i></button>
+                <button class="calc-btn borrar" onclick="borrarIngreso()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="calc-btn operador" onclick="calcularInverso()">1/𝑥</button>
+                <button class="calc-btn operador" onclick="elevarAlCuadrado()">𝑥²</button>
+                <button class="calc-btn operador" onclick="calcularRaizCuadrada()">√𝑥</button>
+                <button class="calc-btn operador" onclick="agregarOperador('/')"><i class="fa-solid fa-divide"></i></button>
+                <button class="calc-btn" onclick="agregarNumero('1')">1</button>
+                <button class="calc-btn" onclick="agregarNumero('2')">2</button>
+                <button class="calc-btn" onclick="agregarNumero('3')">3</button>
+                <button class="calc-btn operador" onclick="agregarOperador('x')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="calc-btn" onclick="agregarNumero('4')">4</button>
+                <button class="calc-btn" onclick="agregarNumero('5')">5</button>
+                <button class="calc-btn" onclick="agregarNumero('6')">6</button>
+                <button class="calc-btn operador" onclick="agregarOperador('-')"><i class="fa-solid fa-minus"></i></button>
+                <button class="calc-btn" onclick="agregarNumero('7')">7</button>
+                <button class="calc-btn" onclick="agregarNumero('8')">8</button>
+                <button class="calc-btn" onclick="agregarNumero('9')">9</button>
+                <button class="calc-btn operador" onclick="agregarOperador('+')"><i class="fa-solid fa-plus"></i></button>
+                <button class="calc-btn operador" onclick="cambiarSigno('+/-')"><i class="fa-solid fa-plus-minus"></i></button>
+                <button class="calc-btn" onclick="agregarNumero('0')">0</button>
+                <button class="calc-btn" onclick="agregarPunto()">.</button>
+                <button class="calc-btn igual" onclick="calcularResultado()"><i class="fa-solid fa-equals"></i></button>
+            </div>
+        </div>
+    </section>
+<script src="/javascript/calculadora.js"></script>
+</body>
+</html>

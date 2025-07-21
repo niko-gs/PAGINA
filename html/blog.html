@@ -18,8 +18,8 @@
         <nav>
             <a href="noticias.html">NOTICIAS</a>
             <a href="#contacto">CONTACTO</a>
-            <a href="index.html#about-me">SOBRE MÍ</a>
-            <a href="linktree.html">LINKTREE</a>
+            <a href="sobre-mi.html#about-me">SOBRE MÍ</a>
+            <a href="/index.html">LINKTREE</a>
         </nav>
     </header>
     <section id="noticias">
@@ -68,18 +68,6 @@
             </ul>
             <p>© 2025 - Not ESPN</p>
     </footer>
-<script>
-  document.getElementById("formulario").addEventListener("submit", function(event) 
-  {
-    event.preventDefault();
-    emailjs.sendForm("service_jp21mzp", "template_r9s4ml3", this)
-      .then(function() {
-        alert("Mensaje enviado.");
-        document.getElementById("formulario").reset();
-      }, function(error) {
-        alert("Ocurrió un error: " + JSON.stringify(error));
-      });
-  });
-</script>
+<script src="/javascript/mail.js"></script>
 </body>
 </html>
